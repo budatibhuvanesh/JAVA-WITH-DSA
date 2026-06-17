@@ -20,4 +20,85 @@ public class Solution {
     }
 }
 
+## Inverted Triangle 
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        int nums = 1;
+        for (int col = 0; col < num; col++) {
+            for (int row = 0; row < col; row++) {
+                System.out.print(nums + " ");
+                nums++;
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+## Inverted triangle with Alphabets
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt(); 
+        for (int col = 1; col<=num; col++) {
+            char ch = 'A';
+            for (int row = 1; row <= col; row++) {
+                System.out.print(ch + " ");
+                ch++;
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+##triangle shape elements
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                if (i == j || j == 1 || i == n || j == n) {
+                    System.out.print(j + "");  
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();  
+        }
+    }
+}
+
+
+
+###triangle shape with alphabets
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        char ch='A';
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                if (i == j || j == 1 || i == n || j == n) {
+                    System.out.print(ch+ "");
+                    ch++;  
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();  
+        }
+    }
+}
 
