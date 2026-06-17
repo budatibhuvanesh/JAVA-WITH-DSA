@@ -102,3 +102,27 @@ public class Main {
     }
 }
 
+
+## printing * in rambus shape
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        int nums = 1;
+        for (int col = 1; col <= num; col++) {
+            for (int row = 1; row <= num - col; row++) {
+                System.out.print(" ");
+            }
+            for (int row = 1; row <= num; row++) {
+                if (col == 1 || col == num || row == 1 || row == num) {
+                    System.out.print(nums + " ");
+                } else {
+                    System.out.print("  "); 
+                }
+                nums++;
+            }
+            System.out.println();
+        }
+    }
+}
