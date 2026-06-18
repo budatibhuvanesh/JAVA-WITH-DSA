@@ -192,4 +192,58 @@ class Solution {
         
     }
 }
+## Move all the zeros to the end{Array)
+class Solution {
+    void pushZerosToEnd(int[] arr) {
+      int j = 0;
+      for(int i =0;i<arr.length;i++)
+      if(arr[i]!=0){
+          int temp =arr[i];
+          arr[i]=arr[j];
+          arr[j]=temp;
+          j++;
+      }
+        
+    }
+}
 
+##Rotate Array 
+
+class Solution {
+    static void rotateArr(int arr[], int d) {
+        int n = arr.length;
+        d = d % n;
+        int[] temp = new int[n];
+        int k = 0;
+        for(int i = d; i < n; i++) 
+        {
+            temp[k++] = arr[i];
+        }
+        for(int i = 0; i < d; i++)
+        {
+            temp[k++] = arr[i];
+        }
+        for(int i = 0; i < n; i++)
+        {
+            arr[i] = temp[i];
+        }
+    }
+}
+
+
+## Rotate and Delete 
+
+class Solution {
+    public static int rotateDelete(ArrayList<Integer> arr) {
+        int size = arr.size();
+        int k  = 2;
+        for(int i=0; i<size/2; i++){
+            int temp = arr.get(arr.size()-1);
+            arr.remove(arr.size()-1);
+            arr.add(0, temp);
+            arr.remove(arr.size()-k+1);
+            k++;
+        }
+        return arr.get(0);
+    }
+}
